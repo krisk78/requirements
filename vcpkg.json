@@ -1,0 +1,25 @@
+{
+  "name": "requirements",
+  "version": "1.0.0-beta",
+  "description": "Header library that provides a framework to handle dependencies",
+  "homepage": "https://github.com/krisk78/requirements",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "features": {
+    "tests": {
+      "description": "Building tests",
+      "dependencies": [
+        "gtest"
+      ]
+    }
+  }
+}
