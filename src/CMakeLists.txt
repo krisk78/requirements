@@ -5,12 +5,12 @@ foreach(_DEP_LIB ${${PROJECT_NAME}_DEPENDENCIES})
     list(APPEND ${PROJECT_NAME}_LINK_LIBS ${_DEP_LIB}::${_DEP_LIB})
 endforeach()
 
-add_library(${PROJECT_NAME} STATIC "${PROJECT_NAME}.cpp")
+add_library(${PROJECT_NAME} INTERFACE)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ${${PROJECT_NAME}_LINK_LIBS})
 
 target_include_directories(${PROJECT_NAME} 
-    PUBLIC 
+    INTERFACE 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
