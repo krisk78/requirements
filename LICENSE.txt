@@ -1,4 +1,4 @@
-Header library requirements
+Header-only library requirements
 Copyright (c) 2024 Christophe COUAILLET
 
 MIT License
