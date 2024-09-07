@@ -38,7 +38,11 @@ Returns true if the given object is required by at least one other object
 Removes all dependencies
 
 ### void add(const &lt;T&gt;& dependent, const &lt;T&gt;& requirement)
-Adds a dependency between the given dependent and requirement
+Adds a dependency between the given dependent and requirement<br>
+An assertion occurs if:
+* dependent and requirement are the same object
+* the relation already exists
+* the opposite relation already exists while reflexivity is not active
 
 ### void remove(const &lt;T&gt;& dependent, const &lt;T&gt;& requirement)
 Removes the given dependency between the given dependent and requirement
@@ -65,3 +69,20 @@ Lists all objects for which the one given is dependent, directly or indirectly.
 Lists all objects that are dependent from the given object, directly or indirectly.
 
 ### std::vector&lt;std::vector&lt;T&gt;&gt; all_requirements(bool without_duplicates) const
+Lists all dependencies by branch, from dependents to required objects<br>
+If without_duplicates is true, then only objects that have no dependents are used as root of branches
+
+### std::vector&lt;std::vector&lt;T&gt;&gt; all_dependencies(bool without_duplicates) const
+Lists all dependencies by branch, from requirements to dependents<br>
+If without_duplicates is true, then only objects that not depends on any object are used as root of branches
+
+### std::unordered_multimap&lt;T, T&gt; get() const
+Lists all pairs of objects (dependent, requirement)
+
+### void set(const std::unordered_multimap&lt;T, T&gt; dependecies)
+Resets dependencies from the given list of pairs (dependent, requirement)<br>
+An assertion occurs if rules are broken, see add method
+
+### void merge(const std::unordered_multimap&lt;T, T&gt; dependencies)
+Merges the given list of pairs (dependent, requirement) with existing ones<br>
+An assertion occurs if rules are broken, see add method
