@@ -59,9 +59,9 @@ Returns the list of objects on which the given object directly depends
 Returns the list of objects that are directly dependent of the given object
 
 ### std::vector&lt;std::vector&lt;T&gt;&gt; all_requirements(const &lt;T&gt;& dependent) const
-Lists all the objects for which the one given is dependent, directly or indirectly.
+Lists all objects for which the one given is dependent, directly or indirectly.
 
 ### std::vector&lt;std::vector&lt;T&gt;&gt; all_dependencies(const &lt;T&gt;& requirement) const
-Lists all the objects that are dependent from the given object, directly or indirectly.
+Lists all objects that are dependent from the given object, directly or indirectly.
 
 ### std::vector&lt;std::vector&lt;T&gt;&gt; all_requirements(bool without_duplicates) const
