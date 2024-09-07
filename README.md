@@ -81,8 +81,8 @@ Lists all pairs of objects (dependent, requirement)
 
 ### void set(const std::unordered_multimap&lt;T, T&gt; dependecies)
 Resets dependencies from the given list of pairs (dependent, requirement)<br>
-An assertion occurs if rules are broken, see add method
+An assertion occurs if rules are broken, see [add method](#void-addconst-t-dependent-const-t-requirement)
 
 ### void merge(const std::unordered_multimap&lt;T, T&gt; dependencies)
 Merges the given list of pairs (dependent, requirement) with existing ones<br>
-An assertion occurs if rules are broken, see add method
+An assertion occurs if rules are broken, see [add method](#void-addconst-t-dependent-const-t-requirement)
