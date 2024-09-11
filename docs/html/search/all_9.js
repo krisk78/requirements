@@ -8,6 +8,5 @@ var searchData=
   ['requirements_5',['Requirements',['../classrequirements_1_1_requirements.html',1,'requirements::Requirements&lt; T &gt;'],['../classrequirements_1_1_requirements.html#a5223e33fe570dfb3c85d3126bce23d09',1,'requirements::Requirements::Requirements(const bool reflexive=false) noexcept']]],
   ['requirements_6',['requirements',['../classrequirements_1_1_requirements.html#aa280042c42dd6c2f4d79ab488cbbb1d4',1,'requirements::Requirements']]],
   ['requirements_20header_20only_20library_7',['requirements header-only library',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['requirements_2ehpp_8',['requirements.hpp',['../requirements_8hpp.html',1,'']]],
-  ['requirements_3c_20niceguys_20_3e_9',['Requirements&lt; NiceGuys &gt;',['../classrequirements_1_1_requirements.html',1,'requirements']]]
+  ['requirements_3c_20niceguys_20_3e_8',['Requirements&lt; NiceGuys &gt;',['../classrequirements_1_1_requirements.html',1,'requirements']]]
 ];
