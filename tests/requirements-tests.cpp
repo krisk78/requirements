@@ -26,9 +26,9 @@ protected:
 
     // void TearDown() override {}
 
-    Requirements<NiceGuys> req0{ false };
-    Requirements<NiceGuys> req1{ false };
-    Requirements<NiceGuys> req2{ true };
+    requirements::Requirements<NiceGuys> req0{ false };
+    requirements::Requirements<NiceGuys> req1{ false };
+    requirements::Requirements<NiceGuys> req2{ true };
 };
 
 using RequirementsDeathTest = RequirementsTest;
@@ -112,12 +112,12 @@ TEST_F(RequirementsTest, All_Dependencies)
         EXPECT_TRUE(path.back() == ng::Joe || path.back() == ng::Kyle);
 }
 
-TEST_F(RequirementsTest, Requires)
+TEST_F(RequirementsTest, Exists_Recursive)
 {
-    EXPECT_TRUE(req1.requires(ng::Kyle, ng::John));
-    EXPECT_FALSE(req1.requires(ng::Jack, ng::Joe));
-    EXPECT_TRUE(req2.requires(ng::Harry, ng::Joe));
-    EXPECT_TRUE(req2.requires(ng::Joe, ng::Harry));
+    EXPECT_TRUE(req1.exists(ng::Kyle, ng::John, true));
+    EXPECT_FALSE(req1.exists(ng::Jack, ng::Joe, true));
+    EXPECT_TRUE(req2.exists(ng::Harry, ng::Joe, true));
+    EXPECT_TRUE(req2.exists(ng::Joe, ng::Harry, true));
 }
 
 TEST_F(RequirementsTest, Remove_All)
