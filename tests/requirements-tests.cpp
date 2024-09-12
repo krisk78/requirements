@@ -26,9 +26,9 @@ protected:
 
     // void TearDown() override {}
 
-    requirements::Requirements<NiceGuys> req0{ false };
-    requirements::Requirements<NiceGuys> req1{ false };
-    requirements::Requirements<NiceGuys> req2{ true };
+    Requirements::Requirements<NiceGuys> req0;
+    Requirements::Requirements<NiceGuys> req1;
+    Requirements::Requirements<NiceGuys> req2{ true };
 };
 
 using RequirementsDeathTest = RequirementsTest;

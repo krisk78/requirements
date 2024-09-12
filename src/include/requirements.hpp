@@ -14,7 +14,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace requirements
+namespace Requirements
 {
 
     /*! \brief Requirements is a class that handles pairs of objects for which the first object depends on the second object.
@@ -27,15 +27,19 @@ namespace requirements
     class Requirements
     {
     public:
-        Requirements() = delete;
-        /*! \brief Constructor. Set the reflexive status to true to allow mutual dependencies.
-        *   \param reflexive sets the reflexive mode, false by default
+
+        /*! \brief Default constructor. Set the reflexive status to false.
         */
-        Requirements(const bool reflexive = false) noexcept
+        Requirements() : Requirements(false) {};
+
+        /*! \brief Constructor. Set the reflexive status to true to allow mutual dependencies.
+        *   \param reflexive sets the reflexive mode
+        */
+        Requirements(const bool reflexive) noexcept
             : m_reflexive(reflexive) {};
 
         /*! \brief Informs on the reflexive status of the instance.
-        *   \return true if reflexion is activated
+        *   \return true if reflexive mode is activated
         */
         bool reflexive() const noexcept { return m_reflexive; }
 
